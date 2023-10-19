@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <!-- COPY THIS ENTIRE SECTION FROM ONESIGNAL INSTALLATION INSTRUCTIONS -->
+        <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+        <script>
+          window.OneSignalDeferred = window.OneSignalDeferred || [];
+          OneSignalDeferred.push(function(OneSignal) {
+            OneSignal.init({
+              appId: "INSERT_APP_ID",
+              safari_web_id: "INSERT_SAFARI_WEB_ID",
+              notifyButton: {
+                enable: false,
+              },
+              allowLocalhostAsSecureOrigin: true,
+            });
+          });
+        </script>
+
+<!-- Generated for our app. Filip set notifyButton to false (they had true) -->
+<!-- <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(function(OneSignal) {
+    OneSignal.init({
+      appId: "27a722e5-c59d-4615-a2c0-950b91cf3af5",
+      safari_web_id: "web.onesignal.auto.4d68c5e3-f56f-4052-bfb7-4c135295bfe6",
+      notifyButton: {
+        enable: true,
+      },
+      allowLocalhostAsSecureOrigin: true,
+    });
+  });
+</script> -->
+
+        <!-- web3.js (to handle the wallet connection)-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.4-rc.1/web3.min.js"></script>
+    </head>
+    <body>
+        <h1>Notifications</h1>
+        <button onclick="window.connect()">Connect and subscribe</button>
+        <script src="./main.js"></script>
+    </body>
+</html>
